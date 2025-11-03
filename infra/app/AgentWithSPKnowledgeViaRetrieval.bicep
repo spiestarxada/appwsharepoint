@@ -66,7 +66,7 @@ resource app 'Microsoft.App/containerApps@2023-05-02-preview' = {
     configuration: {
       ingress:  {
         external: true
-        targetPort: 80
+        targetPort: 8080
         transport: 'auto'
       }
       registries: [
@@ -90,7 +90,7 @@ resource app 'Microsoft.App/containerApps@2023-05-02-preview' = {
           env: union([
             {
               name: 'PORT'
-              value: '80'
+              value: '8080'
             }
           ],
           env,
