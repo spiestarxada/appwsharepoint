@@ -2,7 +2,7 @@
 
 name: AgentWithSPKnowledgeViaRetrieval
 metadata:
-    template: azd-init@1.9.6
+    template: app-with-sharepoint-knowledge-and-actions
 services:
     AgentWithSPKnowledgeViaRetrieval:
         project: ./AgentWithSPKnowledgeViaRetrieval.csproj
