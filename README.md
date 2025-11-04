@@ -1,6 +1,6 @@
 # AI Application with SharePoint Knowledge and Actions
 
-This project features a web application and an agent designed to help users process information from their SharePoint content and generate summary reports. The application leverages the Azure AI Foundry SDK to host and communicate with the agent, which utilizes the Copilot Retrieval API for semantic queries of relevant SharePoint content. The Retrieval API relies on SharePoint’s built-in semantic index and access control.
+This project features a web application and an agent designed to help users process information from their SharePoint content and generate summary reports. The application leverages the Azure AI Foundry SDK to host and communicate with the agent, which utilizes the Copilot Retrieval API ([learn more](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/api/ai-services/retrieval/overview)) for semantic queries of relevant SharePoint content. The Retrieval API relies on SharePoint’s built-in semantic index and access control.
 
 <br/>
 
@@ -10,8 +10,6 @@ This project features a web application and an agent designed to help users proc
 
 </div>
 <br/>
-
-<b>IMPORTANT!</b> Solution templates are to assist your development of AI solutions for specific scenarios. Review all provided resources and carefully test all AI solution behavior in the context of your use case and specifically the use of [Microsoft 365 Copilot Retrieval API](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/api/ai-services/retrieval/overview).   AI solutions you create may be subject to legal and regulatory requirements, may require licenses, or may not be suitable for all industries, scenarios, or use cases. By using any solution template, you are acknowledging that AI solutions or other output created using that template are solely your responsibility, and that you will comply with all applicable laws, regulations, and relevant safety standards, terms of service, and codes of conduct.
 
 With any AI solutions you create using these templates, you are responsible for assessing all associated risks, and for complying with all applicable laws and safety standards. [Learn more](https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-ai/agents/transparency-note) and [See here](https://github.com/microsoft/agent-framework/blob/main/TRANSPARENCY_FAQ.md).
 
@@ -68,7 +66,7 @@ After deployment, try asking the application to check policy compliance to test 
 
 For developers who want to run the application locally or customize the application:
 
-- [Local Development Guide](./docs/LOCAL_DEVELOPMENT.md) - Set up a local development environment, customize the frontend (starting with AgentPreview.tsx), modify agent instructions and tools, and use evaluation to improve your code.
+- [Local Development Guide](./docs/LOCAL_DEVELOPMENT.md) - Set up a local development environment, customize the frontend, modify agent instructions and tools, and use evaluation to improve your code.
 
 ## Resource Clean-up
 
