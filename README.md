@@ -13,19 +13,21 @@ This project features a web application and an agent designed to help users proc
 
 <b>IMPORTANT!</b> Solution templates are to assist your development of AI solutions for specific scenarios. Review all provided resources and carefully test all AI solution behavior in the context of your use case and specifically the use of [Microsoft 365 Copilot Retrieval API](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/api/ai-services/retrieval/overview).   AI solutions you create may be subject to legal and regulatory requirements, may require licenses, or may not be suitable for all industries, scenarios, or use cases. By using any solution template, you are acknowledging that AI solutions or other output created using that template are solely your responsibility, and that you will comply with all applicable laws, regulations, and relevant safety standards, terms of service, and codes of conduct.
 
+With any AI solutions you create using these templates, you are responsible for assessing all associated risks, and for complying with all applicable laws and safety standards. [Learn more](https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-ai/agents/transparency-note) and [See here](https://github.com/microsoft/agent-framework/blob/main/TRANSPARENCY_FAQ.md).
+
 <h2><img src="./docs/images/readme/solution-overview.png" width="48" />
 Solution overview
 </h2>
 
 This solution deploys a web-based chat application with AI capabilities running in Azure Container App.
 
-The application leverages Azure AI Foundry projects and Azure AI services to provide intelligent policy compliance analysis. It supports retrieving content from SharePoint sites using Microsoft Graph API and analyzes documents against compliance rules using Azure AI models. The solution includes built-in monitoring capabilities with tracing to ensure easier troubleshooting and optimized performance.
+The application leverages Azure AI Foundry projects and Azure AI services to provide intelligent policy compliance analysis. It supports retrieving content from SharePoint sites using Microsoft 365 Copilot Retrieval API and analyzes documents against compliance rules using Azure AI models. The solution includes built-in monitoring capabilities with tracing to ensure easier troubleshooting and optimized performance.
 
 This solution creates an Azure AI Foundry project and Azure AI services. Instructions are provided for deployment through Azure Developer CLI and local development environment.
 
 ### Solution architecture
 
-The app code runs in Azure Container Apps to process user requests for policy compliance checking. It leverages Azure AI projects and Azure AI services, including the model and Microsoft Graph API for SharePoint content retrieval.
+The app code runs in Azure Container Apps to process user requests for policy compliance checking. It leverages Azure AI projects and Azure AI services, including the model and Microsoft 365 Copilot Retrieval API for SharePoint content retrieval.
 
 |![image](./docs/images/readme/agent-with-sp-knowledge-m1-solution-diagram.png)|
 |---|
@@ -36,7 +38,7 @@ The app code runs in Azure Container Apps to process user requests for policy co
 
 • **Policy Compliance Analysis**: The AI chat application analyzes SharePoint documents against organizational compliance rules, providing detailed violation reports with citations.
 
-• **SharePoint Integration**: Uses Microsoft Graph API with proper authentication to retrieve policy documents from SharePoint sites with respect for user permissions.
+• **SharePoint Integration**: Uses Microsoft 365 Copilot Retrieval API with proper authentication to retrieve policy documents from SharePoint sites with respect for user permissions.
 
 • **Built-in Monitoring and Tracing**: Integrated monitoring capabilities, including structured logging with ILogger, enable tracing and logging for easier troubleshooting and performance optimization.
 
