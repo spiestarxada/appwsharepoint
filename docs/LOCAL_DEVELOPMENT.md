@@ -47,7 +47,12 @@
         - `Sites.Read.All`
         - `Mail.Send`
         - `User.Read.All`
-      - Click **Grant admin consent**
+      - For Azure AD authentication for Azure AI Foundry, also add:
+        - Go to **Add a permission** → **APIs my organization uses**
+        - Search for "Azure AI Services" or use the Application ID: `2ff814a6-3304-4ab8-85cb-cd0e6f879c1d`
+        - Select **Delegated permissions** → `user_impersonation`
+      - **Important**: Grant admin consent for all permissions to enable seamless token acquisition
+      - Click **Grant admin consent** for all permissions
 
 3. **Upload sample files to your SharePoint site**
    1. Create a SharePoint site if you don't already have one. Keep the site URL handy to paste in the application settings in the next step.
@@ -87,11 +92,17 @@
       }
       ```
 
-      > [!NOTE]
-      > You will need your Azure AI inference endpoint (which is not your Azure AI Foundry Project endpoint). To get this navigate to `Models + Endpoints > name of Model` Switch the SDK to `Azure AI Inference SDK` and the code panel should have some code sample with the relevant endpoint. This endpoint will look something like `https://{projectName}.cognitiveservices.azure.com/openai/deployments/{modelName}`
+5. **Setup Access for Azure AI Foundry**
+   You can skip this if you deployed your app via `azd up` as access to Foundry is granted through Managed Identities.
 
+   In Local Development, users need to be individually granted access to the 
+   1. Go to your Azure AI Foundry project in https://ai.azure.com/
+   2. Go to **Management Center** at the bottom
+   3. Under **All Resources** select your project
+   4. Under **Resource** > **Users** click the **+ New User**
+   5. Add all the users that will use your app to access this Foundry resource as an **Azure AI User**
 
-5. **Run Locally**
+6. **Run Locally**
 
    ```bash
    # Install dependencies
