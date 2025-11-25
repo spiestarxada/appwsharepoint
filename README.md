@@ -128,6 +128,8 @@ You can try the [Azure pricing calculator](https://azure.microsoft.com/en-us/pri
 
 ### Security Guidelines
 
+**Do not check actual credentials into your source repository.**
+
 This template uses [Managed Identity](https://learn.microsoft.com/entra/identity/managed-identities-azure-resources/overview) for deployment and Microsoft Identity Web for local development.
 
 To ensure continued best practices in your own repository, we recommend that anyone creating solutions based on our templates ensure that the [Github secret scanning](https://docs.github.com/code-security/secret-scanning/about-secret-scanning) setting is enabled.
